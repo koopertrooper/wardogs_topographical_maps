@@ -1,0 +1,1 @@
+{"kavkazi": {"sat": 0.47, "vlo": 100, "vhi": 175, "sd": 16, "br": 0.5, "wide": 9, "riverw": 44, "minarea": 300, "minext": 60, "spur": 30, "mincomp": 300}, "europe": {"sat": 0.42, "vlo": 60, "vhi": 118, "sd": 10, "br": 0.55, "wide": 13, "riverw": 92, "minarea": 300, "minext": 60, "spur": 40, "mincomp": 400}}
