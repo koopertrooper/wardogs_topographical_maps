@@ -5,9 +5,9 @@ Three maps are covered: **Bakurani** (`kavkazi`), **Ozeti** (`europe`) and **Zes
 
 | | Full map | Landmarks close-up (roads, river, towers, labels) | Altitude colour |
 |---|---|---|---|
-| Bakurani | ![](docs/previews/bakurani-full.jpg) | ![](docs/previews/bakurani-landmarks.jpg) | ![](docs/previews/bakurani-altitude-colour.jpg) |
-| Ozeti | ![](docs/previews/ozeti-full.jpg) | ![](docs/previews/ozeti-landmarks.jpg) | ![](docs/previews/ozeti-altitude-colour.jpg) |
-| Zestafona | ![](docs/previews/zestafona-full.jpg) | ![](docs/previews/zestafona-landmarks.jpg) | ![](docs/previews/zestafona-altitude-colour.jpg) |
+| Bakurani | [![](docs/previews/bakurani-full.jpg)](exports/Bakurani_full-map.png) | [![](docs/previews/bakurani-landmarks.jpg)](exports/Bakurani_1C_landmarks.png) | [![](docs/previews/bakurani-altitude-colour.jpg)](exports/Bakurani_1D_altitude-colour.png) |
+| Ozeti | [![](docs/previews/ozeti-full.jpg)](exports/Ozeti_full-map.png) | [![](docs/previews/ozeti-landmarks.jpg)](exports/Ozeti_2C_landmarks.png) | [![](docs/previews/ozeti-altitude-colour.jpg)](exports/Ozeti_2D_altitude-colour.png) |
+| Zestafona | [![](docs/previews/zestafona-full.jpg)](exports/Zestafona_full-map.png) | [![](docs/previews/zestafona-landmarks.jpg)](exports/Zestafona_3C_landmarks.png) | [![](docs/previews/zestafona-altitude-colour.jpg)](exports/Zestafona_3D_altitude-colour.png) |
 
 ## Ready-to-use PNG exports
 Full sheets (title, map, legend, scale bar), 2336 x 2800 px, in [`exports/`](exports/). Click a link to open or right-click to save.
