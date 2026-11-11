@@ -83,7 +83,7 @@ out = {}
 w = "kavkazi"; m = json.load(open(f"{D}/{w}/map.json")); bx, by = m["bounds"]["min"]
 x0, y0, W = FR[w]; pad = 60
 c0 = int((x0 - pad - bx) / 4); r0 = int((y0 - pad - by) / 4); n = int((W + 2 * pad) / 4)
-a = np.asarray(Image.open(f"/mnt/user-data/uploads/maps/{w}/overview.webp").convert("RGB"))[r0:r0 + n, c0:c0 + n].astype(int)
+a = np.asarray(Image.open(f"assets/maps/{w}/overview.webp").convert("RGB"))[r0:r0 + n, c0:c0 + n].astype(int)
 r, g, b = a[..., 0], a[..., 1], a[..., 2]; ox, oy = bx + c0 * 4, by + r0 * 4
 # pond: very dark pixels in a small box around it
 pb = (slice(int((-11260 - oy) / 4), int((-11110 - oy) / 4)), slice(int((-8110 - ox) / 4), int((-7990 - ox) / 4)))
@@ -120,7 +120,7 @@ out[w] = {"river": stem, "peaks": peaks(w, 3, 350)}
 print("europe peaks", [(round(x), round(y), round(z)) for x, y, z in out[w]["peaks"]])
 m2 = json.load(open(f"{D}/europe/map.json")); ex0, ey0 = m2["bounds"]["min"]
 x0e, y0e, We = FR["europe"]; ce = int((x0e - ex0) / 4); re_ = int((y0e - ey0) / 4); ne = int(We / 4)
-ae = Image.open("/mnt/user-data/uploads/maps/europe/overview.webp").convert("RGB").crop((ce, re_, ce + ne, re_ + ne)).resize((ne * 2, ne * 2))
+ae = Image.open("assets/maps/europe/overview.webp").convert("RGB").crop((ce, re_, ce + ne, re_ + ne)).resize((ne * 2, ne * 2))
 de = ImageDraw.Draw(ae); de.line([((x - (ex0 + ce * 4)) / 2, (y - (ey0 + re_ * 4)) / 2) for x, y in stem], fill=(0, 120, 255), width=3)
 for x, y, z in out["europe"]["peaks"]: de.ellipse(((x - (ex0 + ce * 4)) / 2 - 6, (y - (ey0 + re_ * 4)) / 2 - 6, (x - (ex0 + ce * 4)) / 2 + 6, (y - (ey0 + re_ * 4)) / 2 + 6), outline=(255, 0, 0), width=3)
 ae.save(f"{SCR}/feat_europe.png")

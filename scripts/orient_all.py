@@ -48,4 +48,4 @@ for b in json.load(open(f"{S}/repo/wardogs-data/data/maps/{w}/buildings.json"))[
     if ww<1 or hh<1: continue
     cx,cy=(x0+x1)/2-MX,(y0+y1)/2-MY
     d.polygon([(cx+sx*ww/2*math.cos(th)-sy*hh/2*math.sin(th),cy+sx*ww/2*math.sin(th)+sy*hh/2*math.cos(th)) for sx,sy in((-1,-1),(1,-1),(1,1),(-1,1))],outline=(255,0,255))
-im.crop((600,700,1300,1300)).save("/tmp/claude-0/ovE.png")
+im.crop((600,700,1300,1300)).save(f"{S}/ov_check.png")

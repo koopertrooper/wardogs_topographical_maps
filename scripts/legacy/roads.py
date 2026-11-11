@@ -13,7 +13,7 @@ for w in ["kavkazi", "europe"]:
     bx, by = json.load(open(f"{D}/{w}/map.json"))["bounds"]["min"]; ox_, oy_ = OFF[w]
     x0, y0, W = FR[w]; pad = 150
     c0 = int((x0 - pad + ox_ - bx) / 4); r0 = int((y0 - pad + oy_ - by) / 4); n = int((W + 2 * pad) / 4)
-    a = np.asarray(Image.open(f"/mnt/user-data/uploads/maps/{w}/overview.webp").convert("RGB"))[r0:r0 + n, c0:c0 + n].astype(float)
+    a = np.asarray(Image.open(f"assets/maps/{w}/overview.webp").convert("RGB"))[r0:r0 + n, c0:c0 + n].astype(float)
     mx, mn = a.max(2), a.min(2); sat = (mx - mn) / (mx + 1); val = a.mean(2)
     if w == "kavkazi":
         road = (sat < 0.37) & (val > 118) & (a[..., 2] > 80)

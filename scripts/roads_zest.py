@@ -59,4 +59,4 @@ for ch in chains:
 json.dump(keep, open(f"{SCR}/roads_zest.json", "w")); print("segments", len(keep))
 pv = Image.fromarray(a.astype(np.uint8)); d = ImageDraw.Draw(pv)
 for k in keep: d.line([(x - MX, y - MY) for x, y in k], fill=(255, 0, 255), width=3)
-pv.crop((494, 458, 1739, 1998)).save("/tmp/claude-0/zr_over.png"); Image.open(f"{SCR}/roadmask_{w}.png").crop((494, 458, 1739, 1998)).save("/tmp/claude-0/zr_mask.png")
+pv.crop((494, 458, 1739, 1998)).save(f"{SCR}/zr_over.png"); Image.open(f"{SCR}/roadmask_{w}.png").crop((494, 458, 1739, 1998)).save(f"{SCR}/zr_mask.png")

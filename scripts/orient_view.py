@@ -21,4 +21,4 @@ for b in B:
     for sx,sy in ((-1,-1),(1,-1),(1,1),(-1,1)):
         x=sx*w/2;y=sy*h/2; pts.append((cx+x*math.cos(th)-y*math.sin(th),cy+x*math.sin(th)+y*math.cos(th)))
     d.polygon(pts,outline=(255,0,255))
-im.crop((750,900,1450,1500)).resize((1100,943),Image.LANCZOS).save("/tmp/claude-0/ov.png")
+im.crop((750,900,1450,1500)).resize((1100,943),Image.LANCZOS).save(f"{S}/ov_check.png")
