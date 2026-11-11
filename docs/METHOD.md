@@ -10,7 +10,7 @@ From https://github.com/warpuppies/wardogs-data (game build 25937608):
 
 ## 2. Relief and contours
 - Heightmap is lightly smoothed (Gaussian) and contoured with matplotlib at a per-sheet interval (20 / 10 m full maps, 2 / 1 / 0.5 m close-ups). Every Nth line is an index contour with a height label; spot heights are the local peaks.
-- Hillshade relief image is produced with the same smoothing (`*-relief.webp`).
+- The relief image (`*-relief.webp`) is a hillshade (light from 315 degrees, 40 degrees altitude) over a pale green-to-sand height tint.
 - Fine contours go to a separate `*-minor.svg` layer because of file size.
 - Altitude-colour sheets map height through the matplotlib `turbo` ramp, stretched to the 1st-99th percentile of the window (Zestafona) or its min/max (others).
 - **Zestafona nodata:** its heightmap stores 0 for nodata (a large border region plus isolated pixels). These are filled from the nearest valid pixel and the lowest *valid* height is used as the base (about 25 m), otherwise the colour scale is wrong.
