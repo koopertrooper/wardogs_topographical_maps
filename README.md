@@ -9,6 +9,19 @@ Three maps are covered: **Bakurani** (`kavkazi`), **Ozeti** (`europe`) and **Zes
 | Ozeti | ![](docs/previews/ozeti-full.jpg) | ![](docs/previews/ozeti-landmarks.jpg) | ![](docs/previews/ozeti-altitude-colour.jpg) |
 | Zestafona | ![](docs/previews/zestafona-full.jpg) | ![](docs/previews/zestafona-landmarks.jpg) | ![](docs/previews/zestafona-altitude-colour.jpg) |
 
+## Ready-to-use PNG exports
+Full sheets (title, map, legend, scale bar), 2336 x 2800 px, in [`exports/`](exports/). Click a link to open or right-click to save.
+
+| Sheet | Bakurani | Ozeti | Zestafona |
+|---|---|---|---|
+| Full map | [PNG](exports/Bakurani_full-map.png) | [PNG](exports/Ozeti_full-map.png) | [PNG](exports/Zestafona_full-map.png) |
+| A: Control Zone close-up, 2 m contours | [PNG](exports/Bakurani_1A_control-zone-2m.png) | [PNG](exports/Ozeti_2A_control-zone-2m.png) | n/a |
+| B: fine contours (1 m; 0.5 m on Zestafona) | [PNG](exports/Bakurani_1B_contours-1m.png) | [PNG](exports/Ozeti_2B_contours-1m.png) | [PNG](exports/Zestafona_3B_contours-0.5m.png) |
+| C: landmarks, roads, towers | [PNG](exports/Bakurani_1C_landmarks.png) | [PNG](exports/Ozeti_2C_landmarks.png) | [PNG](exports/Zestafona_3C_landmarks.png) |
+| D: altitude colour | [PNG](exports/Bakurani_1D_altitude-colour.png) | [PNG](exports/Ozeti_2D_altitude-colour.png) | [PNG](exports/Zestafona_3D_altitude-colour.png) |
+
+They are rendered from the board sources with `scripts/export_png.py`. If you need vector, use the SVG overlays in `output/`.
+
 ## Sheets
 Each map has a family of 1168 x 1400 design boards (sources in `sheets/`, a Design canvas with `canvas.json` holding the layout):
 
@@ -23,6 +36,7 @@ Heights are metres above the map's real lowest ground. Buildings are drawn at th
 ## What is in this repo
 - `scripts/`  the Python generators and helpers (see below)
 - `data/`  hand-made and derived inputs: landmark/road/river configuration (`review_cfg.json`), tower positions, measured building angles, traced roads, mosaic and image-offset metadata
+- `exports/`  the finished sheets as PNG images (linked above)
 - `output/`  the generated relief images and SVG overlays used by the sheets
 - `sheets/`  the board sources (`*.dc.html`) and `canvas.json`. Image references there (`/_blob/<id>`) point at assets stored in the original published canvas; the matching files are in `output/`
 - `docs/METHOD.md`  how the maps are made, step by step, including the known limits
